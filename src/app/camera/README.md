@@ -1,6 +1,7 @@
 # MediaStream
 
 This is a demo of how to use MediaStream API in an Angular App. Working on Desktop, mobile & tablet. 
+Full article: https://abimaelbarea.medium.com/camera-access-with-angular-1111175839e1
 
 # Using it on your project
 
