@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 
-import { Mood } from './custom-component/custom-component.component';
+import { Mood } from '../shared/custom-component/custom-component.component';
 
 enum Controls {
   Mood = 'mood',

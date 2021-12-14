@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { CustomComponentModule } from './custom-component/custom-component.module';
+import { CustomComponentModule } from '../shared/custom-component/custom-component.module';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsComponent } from './reactive-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';

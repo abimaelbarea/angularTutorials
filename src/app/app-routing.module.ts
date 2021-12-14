@@ -15,6 +15,13 @@ const routes: Routes = [
         (m) => m.ReactiveFormModule
       ),
   },
+  {
+    path: 'template-forms',
+    loadChildren: () =>
+      import('./template-forms/template-forms.module').then(
+        (m) => m.TemplateFormsModule
+      ),
+  },
 ];
 
 @NgModule({
