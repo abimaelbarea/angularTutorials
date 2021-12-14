@@ -1,0 +1,11 @@
+.navigation {
+  background: hsl(240, 100, 90);
+  padding: 1em;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  list-style-type: none;
+}
