@@ -4,7 +4,7 @@ This is a demo of how to use MediaStream API in an Angular App. Working on Deskt
 
 # Using it on your project
 
-Copy this folder https://github.com/elabi3/angularMediaStream/tree/main/src/app/mediaStream
+Copy this folder https://github.com/abimaelbarea/angularTutorials/tree/master/src/app/camera/mediaStream
 
 Use the directive in a video tag:
 
