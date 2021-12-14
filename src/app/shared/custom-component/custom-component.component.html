@@ -1,6 +1,6 @@
 <p>How do you feel?</p>
 
-<div *ngIf="!disable; else disabledTemplate">
+<ng-container *ngIf="!disable; else disabledTemplate">
   <button
     [ngClass]="{
       custom__button__red: true,
@@ -12,15 +12,6 @@
   </button>
   <button
     [ngClass]="{
-      custom__button__yellow: true,
-      'custom__button--selected': selected === moodRef.Yellow
-    }"
-    (click)="updateState(moodRef.Yellow)"
-  >
-    Yellow
-  </button>
-  <button
-    [ngClass]="{
       custom__button__green: true,
       'custom__button--selected': selected === moodRef.Green
     }"
@@ -28,7 +19,7 @@
   >
     Green
   </button>
-</div>
+</ng-container>
 
 <ng-template #disabledTemplate>
   <p>I'm disabled</p>
