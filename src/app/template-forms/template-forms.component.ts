@@ -10,10 +10,14 @@ export class TemplateFormsComponent {
   selectedMood: Mood = Mood.Green;
   disabled: boolean = false;
 
+  selectedMood2: Mood = Mood.Green;
+  disabled2: boolean = false;
+
   /**
    * Updating the disabled/enabled state of the form item
    */
   updateComponent(): void {
     this.disabled = !this.disabled;
+    this.disabled2 = !this.disabled2;
   }
 }

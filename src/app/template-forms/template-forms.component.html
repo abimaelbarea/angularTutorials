@@ -8,6 +8,12 @@
     [(ngModel)]="selectedMood"
     [ngModelOptions]="{ standalone: true }"
   ></app-custom-component>
+
+  <app-custom-component-and-directive
+    [disabled]="disabled2"
+    [(ngModel)]="selectedMood2"
+    [ngModelOptions]="{ standalone: true }"
+  ></app-custom-component-and-directive>
 </form>
 
 <br />
