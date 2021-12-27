@@ -7,7 +7,21 @@ const routes: Routes = [
     path: 'camera',
     loadChildren: () =>
       import('./camera/camera.module').then((m) => m.CameraModule),
-  }
+  },
+  {
+    path: 'reactive-forms',
+    loadChildren: () =>
+      import('./reactive-forms/reactive-forms.module').then(
+        (m) => m.ReactiveFormModule
+      ),
+  },
+  {
+    path: 'template-forms',
+    loadChildren: () =>
+      import('./template-forms/template-forms.module').then(
+        (m) => m.TemplateFormsModule
+      ),
+  },
 ];
 
 @NgModule({

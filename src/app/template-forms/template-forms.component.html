@@ -1,0 +1,21 @@
+<h1>Template Driven Form</h1>
+<hr />
+<h2>Demo</h2>
+
+<form>
+  <app-custom-component
+    [disabled]="disabled"
+    [(ngModel)]="selectedMood"
+    [ngModelOptions]="{ standalone: true }"
+  ></app-custom-component>
+
+  <app-custom-component-and-directive
+    [disabled]="disabled2"
+    [(ngModel)]="selectedMood2"
+    [ngModelOptions]="{ standalone: true }"
+  ></app-custom-component-and-directive>
+</form>
+
+<br />
+
+<button (click)="updateComponent()">Disable/Enable Component</button>

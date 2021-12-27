@@ -1,0 +1,13 @@
+.custom__button {
+  &__red {
+    background-color: red;
+  }
+  &__green {
+    background-color: green;
+  }
+
+  &--selected {
+    margin: 1em;
+    border: solid 5px black;
+  }
+}

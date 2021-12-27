@@ -1,0 +1,16 @@
+<h1>Reactive Form</h1>
+<hr />
+<h2>Demo</h2>
+
+<form [formGroup]="formGroup">
+  <app-custom-component
+    [formControlName]="controlsRef.Mood"
+  ></app-custom-component>
+  <app-custom-component-and-directive
+    [formControlName]="controlsRef.MoodDirective"
+  ></app-custom-component-and-directive>
+</form>
+
+<br />
+
+<button (click)="updateComponent()">Disable/Enable Component</button>
