@@ -12,4 +12,5 @@ Code: https://github.com/abimaelbarea/angularTutorials/tree/master/src/app/camer
 ## How to Make a Component Compatible with Angular Forms?
 
 Article: https://dev.to/abimaelbarea/how-to-make-a-component-compatible-with-angular-forms-5ac7
+
 Code: https://github.com/abimaelbarea/angularTutorials/tree/master/src/app/shared/custom-component
