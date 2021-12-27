@@ -5,11 +5,13 @@ import { Subject, filter, takeUntil } from 'rxjs';
 import { CustomComponentAndDirectiveComponent } from './custom-component-and-directive.component';
 
 @Directive({
+  // Indicates the component that the directive is used on
   selector: 'app-custom-component-and-directive',
   providers: [
-    // This part is very important to register the component as a ControlValueAccessor one
+    // This part is very important to register the class as a ControlValueAccessor one
     {
       provide: NG_VALUE_ACCESSOR,
+      // This reference the class that implements Control Value Accessor
       useExisting: forwardRef(() => CustomComponentDirective),
       multi: true,
     },
@@ -20,6 +22,9 @@ export class CustomComponentDirective
 {
   private readonly destroyed$ = new Subject<void>();
 
+  /**
+   * @param element Reference to the component instance
+   */
   constructor(private readonly element: CustomComponentAndDirectiveComponent) {
     this.listenComponentChanges();
   }
@@ -29,14 +34,23 @@ export class CustomComponentDirective
     this.destroyed$.complete();
   }
 
+  /**
+   * Subscribes to the component output and updates the internal state
+   */
   private listenComponentChanges(): void {
     if (!this.element) {
       return;
     }
 
+    /**
+     * Event emitter is an Observable that emits events.
+     *
+     * Take a look on the definition:
+     *  - export declare interface EventEmitter<T> extends Subject<T> { }
+     * */
     this.element.onChange
       .pipe(
-        filter(() => this.onChange !== null), // check that we have the correct ref
+        filter(() => this.onChange !== null), // check that we have the correct ref to the callback
         takeUntil(this.destroyed$)
       )
       .subscribe((value) => {
@@ -53,7 +67,7 @@ export class CustomComponentDirective
 
   // Invoked by angular - update internal state
   writeValue(obj: any): void {
-    this.element.selected = obj;
+    this.element.selected = obj; // Updating component internal state
   }
 
   // Invoked by angular - callback function for changes
@@ -68,6 +82,6 @@ export class CustomComponentDirective
 
   // Invoked by angular - update disabled state
   setDisabledState?(isDisabled: boolean): void {
-    this.element.disable = isDisabled;
+    this.element.disable = isDisabled; // Updating component status
   }
 }

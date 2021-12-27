@@ -11,9 +11,10 @@ export enum Mood {
   templateUrl: './custom-component.component.html',
   styleUrls: ['./custom-component.component.scss'],
   providers: [
-    // This part is very important to register the component as a ControlValueAccessor one
+    // This part is very important to register the class as a ControlValueAccessor one
     {
       provide: NG_VALUE_ACCESSOR,
+      // This reference the class that implements Control Value Accessor
       useExisting: forwardRef(() => CustomComponentComponent),
       multi: true,
     },

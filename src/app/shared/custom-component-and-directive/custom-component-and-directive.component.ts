@@ -15,6 +15,8 @@ export class CustomComponentAndDirectiveComponent {
   readonly moodRef = Mood;
   disable: boolean = false;
   selected: Mood = Mood.Green;
+
+  /* Simulating an standard output of a component */
   onChange: EventEmitter<Mood> = new EventEmitter();
 
   updateState(selectedItem: Mood): void {
