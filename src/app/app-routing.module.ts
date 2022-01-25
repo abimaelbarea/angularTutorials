@@ -22,6 +22,11 @@ const routes: Routes = [
         (m) => m.TemplateFormsModule
       ),
   },
+  {
+    path: 'ng-content',
+    loadChildren: () =>
+      import('./ng-content/ng-content.module').then((m) => m.NgContentModule),
+  },
 ];
 
 @NgModule({
