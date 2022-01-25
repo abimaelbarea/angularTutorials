@@ -22,6 +22,13 @@ const routes: Routes = [
         (m) => m.TemplateFormsModule
       ),
   },
+  {
+    path: 'component-as-directive',
+    loadChildren: () =>
+      import('./component-as-directive/component-as-directive.module').then(
+        (m) => m.ComponentAsDirectiveModule
+      ),
+  },
 ];
 
 @NgModule({

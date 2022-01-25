@@ -1,0 +1,10 @@
+<h1>Component as Directive</h1>
+<hr />
+<h2>Demo</h2>
+
+<table>
+  <tr app-header></tr>
+  <ng-container *ngFor="let person of people">
+    <tr app-row [person]="person"></tr>
+  </ng-container>
+</table>
