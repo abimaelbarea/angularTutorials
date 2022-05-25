@@ -4,7 +4,7 @@
 <video
   class="video-container"
   playsinline
-  [mediaStream]="{ video: true }"
+  [mediaStream]="{ video: true, audio: true}"
   (intitError)="onError($event)"
   (videoRecorded)="onVideo($event)"
 >
